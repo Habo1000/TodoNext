@@ -9,7 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@prisma/adapter-better-sqlite3": "^7.6.0",
+    "@prisma/client": "^7.6.0",
     "next": "15.5.13",
+    "prisma": "^7.6.0",
     "react": "19.1.0",
     "react-dom": "19.1.0"
   },

@@ -5,6 +5,7 @@ import Link from "next/link";
 
 export default async function TodoDetail({ params }) {
   const { id } = await params;
+
   const todo = await getTodoById(id);
 
   if (!todo) {
@@ -27,6 +28,7 @@ export default async function TodoDetail({ params }) {
     completed: "text-green-500",
   }[status];
   console.log(status);
+  const localCreatedAt = new Date(createdAt).toLocaleDateString("fr");
 
   return (
     <>
@@ -40,7 +42,7 @@ export default async function TodoDetail({ params }) {
           </span>
 
           <p className="mb-2">{description}</p>
-          <p className="mb-2 text-gray-500 text-sm">Due: {createdAt}</p>
+          <p className="mb-2 text-gray-500 text-sm">Due: {localCreatedAt}</p>
           <p className={`${statusColor} text-sm`}>Status: {status}</p>
 
           <Link

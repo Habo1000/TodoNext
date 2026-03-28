@@ -1,6 +1,6 @@
 "use client";
 
-import { addTodo } from "../lib/actions";
+import { addTodo } from "@/lib/actions";
 import { useRouter } from "next/navigation";
 export default function TodoForm() {
   const router = useRouter();
