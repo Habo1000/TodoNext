@@ -25,6 +25,7 @@ export default function EditTodoForm({
           placeholder="Titre du todo"
           className="border p-2 rounded"
           defaultValue={title}
+          required
         />
         <input
           type="text"
@@ -32,8 +33,9 @@ export default function EditTodoForm({
           placeholder="Description du todo"
           className="border p-2 rounded"
           defaultValue={description}
+          required
         />
-        <select name="priority" defaultValue={priority}>
+        <select name="priority" defaultValue={priority} required>
           <option value="">Selectionnez une valeur </option>
           <option value="low">Low</option>
           <option value="medium">Medium</option>
